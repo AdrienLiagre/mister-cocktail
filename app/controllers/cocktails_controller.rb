@@ -10,13 +10,13 @@ class CocktailsController < ApplicationController
 
 
   def new
-     @restaurant = Restaurant.new
+     @cocktail = Cocktail.new
   end
 
   def create
-    @restaurant = Restaurant.new(restaurant_params)
-    if @restaurant.save
-      redirect_to restaurant_path(@restaurant)
+    @cocktail = Cocktail.new(cocktail_params)
+    if @cocktail.save
+      redirect_to cocktail_path(@cocktail)
     else
       render :new
     end
@@ -24,12 +24,12 @@ class CocktailsController < ApplicationController
 
   private
 
-  def restaurant_params
-    params.require(:restaurant).permit(:name, :address, :category)
+  def cocktail_params
+    params.require(:cocktail).permit(:name)
   end
 
-  def set_restaurant
-    @restaurant = Restaurant.find(params[:id])
+  def set_cocktail
+    @cocktail = Cocktail.find(params[:id])
   end
 
 end
