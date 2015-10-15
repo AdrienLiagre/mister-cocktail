@@ -1,9 +1,14 @@
 <%= simple_form_for(@cocktail) do |f| %>
-  <%= f.error_notification %>
+<%= f.error_notification %>
+<div class="container">
+  <div class="row">
+    <%= f.input :name %>
 
-  <%= f.input :name %>
+    <%= f.button :submit %>
 
-  <%= f.button :submit %>
+  </div>
+</div>
+
 
 
 <% end %>

@@ -1,20 +1,17 @@
+<h1 class="text-center">Liste des cocktails</h1>
+
 <div class="container">
   <div class="row">
-
-<h1>Liste des cocktails</h1>
-<% @cocktails.each do |cocktail| %>
-  <br>
-  <div>
-    <%= link_to cocktail.name, cocktail_path(id: cocktail.id) %>
-    <br>
-    <br>
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4">
+      <%= render "cocktails/card",cocktail: cocktail %>
+    </div>
+    <% end %>
   </div>
-<% end %>
+</div>
 <br>
-</div>
-<%= link_to "create a new cocktail", new_cocktail_path, class: "btn btn-success" %>
-
-
-</div>
-
-
+<br>
+<br>
+<h3 class="text-center">
+  <%= link_to "create a new cocktail", new_cocktail_path, class: "btn btn-success text-center" %>
+</h3>
