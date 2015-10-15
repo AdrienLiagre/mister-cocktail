@@ -23,6 +23,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+gem 'simple_form'
 
 ruby '2.2.3'
 gem 'rails_12factor', group: :production
@@ -39,6 +42,10 @@ gem 'puma',           group: :production
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'binding_of_caller'
+  gem 'better_errors'
+
+
 end
 
 group :development do
