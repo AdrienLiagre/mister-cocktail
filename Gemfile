@@ -29,6 +29,9 @@ gem 'simple_form'
 
 gem 'figaro'
 
+gem 'aws-sdk', '< 2.0'
+gem 'paperclip'
+
 ruby '2.2.3'
 gem 'rails_12factor', group: :production
 gem 'puma',           group: :production
